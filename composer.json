@@ -1,0 +1,19 @@
+{
+    "name": "canaltp/fenrir-api-client-bundle",
+    "license": "GPL-3.0",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle to integrate Fenrir Api client in a Symfony application.",
+    "homepage": "https://github.com/CanalTP/fenrir-api-client-bundle",
+    "require": {
+        "php": ">=5.5",
+        "symfony/dependency-injection": "~2.3|~3.0",
+        "symfony/http-kernel": "~2.3|~3.0",
+        "symfony/config": "~2.3|~3.0",
+        "canaltp/fenrir-api-client": "^1.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CanalTP\\FenrirApiClientBundle\\": "src/"
+        }
+    }
+}
