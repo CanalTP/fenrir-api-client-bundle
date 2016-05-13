@@ -5,7 +5,6 @@ namespace CanalTP\FenrirApiClientBundle\DependencyInjection;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use CanalTP\FenrirApiClient\FenrirApi;
 
 class CanalTPFenrirApiClientExtension extends Extension
 {
@@ -18,12 +17,13 @@ class CanalTPFenrirApiClientExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $baseUrl = $config['uri'];
+        $fenrirApiClass = 'CanalTP\\FenrirApiClient\\FenrirApi';
 
         $fenrirApiDefinition = new Definition();
 
         $fenrirApiDefinition
-            ->setClass(FenrirApi::class)
-            ->setFactory([FenrirApi::class, 'createWithBaseUrl'])
+            ->setClass($fenrirApiClass)
+            ->setFactory([$fenrirApiClass, 'createWithBaseUrl'])
             ->setArguments([$baseUrl])
         ;
 

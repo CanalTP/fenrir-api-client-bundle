@@ -5,7 +5,7 @@
     "description": "Symfony bundle to integrate Fenrir Api client in a Symfony application.",
     "homepage": "https://github.com/CanalTP/fenrir-api-client-bundle",
     "require": {
-        "php": ">=5.5",
+        "php": ">=5.4",
         "symfony/dependency-injection": "~2.3|~3.0",
         "symfony/http-kernel": "~2.3|~3.0",
         "symfony/config": "~2.3|~3.0",
